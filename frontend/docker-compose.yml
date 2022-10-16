@@ -1,0 +1,12 @@
+
+version: '3.9'
+services:
+  react:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/src
+    command: sh -c "cd template && npm start"
+    ports:
+      - "3000:3000"
